@@ -10,21 +10,21 @@ This research project investigates the fundamental differences between **Physics
 
 ```
 AI4Physics-project/
-├── data.py                          # Simple Harmonic Oscillator experiments
-├── duffing_data.py                  # Duffing Oscillator experiments (enhanced)
+├── simple_oscillator.py                   # Simple Harmonic Oscillator experiments
+├── duffing_oscillator.py                  # Duffing Oscillator experiments (enhanced)
 ```
 
 ## 🔬 Experimental Design
 
 ### Two-Stage Approach
 
-**Stage 1: Simple Harmonic Oscillator** ([data.py](data.py))
+**Stage 1: Simple Harmonic Oscillator** ([simple_oscillator.py](simple_oscillator.py))
 - System: `mx'' + cx' + kx = 0`
 - Parameters: m=1.0, c=1.0, k=20.0
 - Purpose: Baseline testing and proof of concept
 - Training: 1000 epochs, 80/20 train/test split
 
-**Stage 2: Duffing Oscillator** ([duffing_data.py](duffing_data.py))
+**Stage 2: Duffing Oscillator** ([duffing_oscillator.py](duffing_oscillator.py))
 - System: `mx'' + cx' + kx + βx³ = F·cos(Ωt)`
 - Parameters: m=1.0, c=0.25, k=1.0, β=5.0, F=0.5, Ω=1.2
 - Purpose: Enhanced testing on nonlinear system
@@ -42,12 +42,12 @@ pip install torch numpy pandas scikit-learn matplotlib scipy
 
 **Simple Harmonic Oscillator:**
 ```bash
-python data.py
+python simple_oscillator.py
 ```
 
 **Duffing Oscillator (Enhanced):**
 ```bash
-python duffing_data.py
+python duffing_oscillator.py
 ```
 
 ### Core Components
